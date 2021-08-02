@@ -22,7 +22,7 @@ Then navigate there from the command line (subsequent commands assume you are ru
 ```sh
 cd ~/Desktop/shopping_cart
 ```
-Use Anaconda to create and activate a new virtual environment, perhaps called "shopping-env":
+Use Anaconda to create and activate a new virtual environment, perhaps called "movies-env":
 
 ```sh
 conda create -n movies-env python=3.8
