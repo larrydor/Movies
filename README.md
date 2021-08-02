@@ -59,6 +59,7 @@ Create a new file called ".env" in the root directory of this repo, then copy th
 ```sh
 # the .env file
 
+
 RAPID_API_KEY="abc123"
 SENDER_EMAIL_ADDRESS="me@example.com"
 SENDGRID_API_KEY="abc123"
