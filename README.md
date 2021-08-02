@@ -42,7 +42,7 @@ pip install -r requirements.txt
 ### RapidAPI Setup
 
 Signup for [IMDB API through RapidAPI](https://rapidapi.com/apidojo/api/imdb8/):
-  1) Obtain a RapidAPI key to be entered in the .env file as (`RAPID_API_KEY`).
+  1) Obtain a Rapid API Key to be entered in the .env file as (`RAPID_API_KEY`).
 
 ### Email Template Setup
 
@@ -54,11 +54,12 @@ Follow [this guide](https://github.com/prof-rossetti/intro-to-python/blob/master
 
 ### Credentials Setup
 
-Create a new file called ".env" in the root directory of this repo, then copy the contents below into it, adapting the values to match the `EMAIL_ADDRESS` , `SENDGRID_API_KEY`, and `SENDGRID_TEMPLATE_ID`, obtained in the setup step above.
+Create a new file called ".env" in the root directory of this repo, then copy the contents below into it, adapting the values to match the `EMAIL_ADDRESS`, `SENDGRID_API_KEY`, and `SENDGRID_TEMPLATE_ID`, obtained in the setup step above. Additionally, enter in the `RAPID_API_KEY` obtained from RapidAPI.
 
 ```sh
 # the .env file
 
+RAPID_API_KEY="abc123"
 SENDER_EMAIL_ADDRESS="me@example.com"
 SENDGRID_API_KEY="abc123"
 SENDGRID_TEMPLATE_ID="templ789"
