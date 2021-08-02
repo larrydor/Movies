@@ -1,6 +1,6 @@
 # Movies
 
-A Python application with built-in IMDB8 API integration to easily retrieve key information on your favorite movies.
+A Python application an IMDB8 API integration to easily retrieve key information on your favorite movies.
 
 ## Group Members
 * Alex Fleshner
