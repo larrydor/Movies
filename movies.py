@@ -9,6 +9,8 @@ from datetime import datetime
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 
+now = datetime.today().strftime('%m-%d-%Y %H:%M:%S')
+
 SENDGRID_API_KEY = os.getenv("SENDGRID_API_KEY", "OOPS, please create an environment variable called 'SENDGRID_API_KEY'")
 MY_EMAIL_ADDRESS = os.getenv("SENDER_EMAIL_ADDRESS", "OOPS, please create an environment variable called 'SENDER_EMAIL_ADDRESS'")
 SENDGRID_TEMPLATE_ID = os.getenv("SENDGRID_TEMPLATE_ID", default="OOPS, please set env var called 'SENDGRID_TEMPLATE_ID'")
@@ -93,21 +95,10 @@ elif "@" not in user_email_address:
 else:
     print(f"Sending copy to {EMAIL_ADDRESS}.")
 
-    email_products = []
-    for items in range(len(selected_ids)):
-        if not selected_ids[items].isnumeric():
-            email_product = selected_ids[items]
-            email_product["name"] = items["name"]
-            email_product["price"] = to_usd(items["price"])
-            email_products.append(email_product)
-        #source: https://stackoverflow.com/questions/10631473/str-object-does-not-support-item-assignment-in-python
-
     receipt = {
-        "subtotal_price_usd": to_usd(total_purchase),
-        "tax_price_usd": to_usd(tax_total),
-        "total_price_usd": to_usd(total_total),
+        "subtotal_price_usd": film_name,
         "human_friendly_timestamp": now,
-        "products": email_products
+        "products": film_name
     }
     
     client = SendGridAPIClient(SENDGRID_API_KEY)

@@ -1,2 +1,3 @@
 requests
 python-dotenv
+sendgrid==6.6.0 # source: https://github.com/s2t2/shopping-cart-with-email-receipts/blob/master/requirements.txt
