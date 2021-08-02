@@ -5,7 +5,7 @@ import json
 import http.client
 from dotenv.main import load_dotenv
 load_dotenv()
-API = os.getenv("RAPID_API")
+API_KEY = os.getenv("RAPID_API_KEY")
 
 print("-------------------------")
 x = input("Film Title you seek to research: ")
@@ -15,7 +15,7 @@ print("Let me look that up for you...")
 conn = http.client.HTTPSConnection("imdb8.p.rapidapi.com")
 
 headers = {
-    'x-rapidapi-key': API,
+    'x-rapidapi-key': API_KEY,
     'x-rapidapi-host': "imdb8.p.rapidapi.com"
     }
 
@@ -32,7 +32,7 @@ url = "https://imdb8.p.rapidapi.com/auto-complete"
 querystring = {"q":x}
 
 headers = {
-    'x-rapidapi-key': API,
+    'x-rapidapi-key': API_KEY,
     'x-rapidapi-host': "imdb8.p.rapidapi.com"
     }
 
