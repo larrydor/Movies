@@ -54,7 +54,7 @@ parsed_response = json.loads(response.text)
 
 film_name = [movies["l"] for movies in parsed_response["d"]]
 #print(film_name)
-film_year = [movies["y"] for movies in parsed_response["d"]]
+#film_year = [movies["y"] for movies in parsed_response["d"]]
 #print(film_year)
 #print(film_name, film_year)
 
@@ -73,7 +73,7 @@ def listToString(s):
     return str1 
 
 print(listToString(film_name))
-print(film_name, film_year)
+print(film_name)
 
 
 
