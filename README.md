@@ -1,3 +1,5 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/7a5093ceea72a98b08c4/maintainability)](https://codeclimate.com/github/larrydor/Movies/maintainability)
+
 # Movies
 
 A Python application that utilizes a IMDB8 API integration to easily retrieve key information on your favorite movies.
